@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const app = express();  // Create an Express application instance
 const port = process.env.PORT || 8090;  // Set the port number
+const db_link = process.env.DATABASE_URL
 
 // Middleware to log incoming requests
 app.use((req, res, next) => {
@@ -18,6 +19,10 @@ app.get('/', (req, res) => {
 // Route with a URL parameter (e.g., /greet/John)
 app.get('/greet/:name', (req, res) => {
   res.send(`Hello, ${req.params.name}!`);  // Send personalized greeting
+});
+
+app.get('/testlink', (req, res) => {
+  res.send(`DbLink: , ${db_link}!`);
 });
 
 // Custom error handler middleware
