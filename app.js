@@ -22,7 +22,7 @@ app.get('/greet/:name', (req, res) => {
 });
 
 app.get('/testlink', (req, res) => {
-  res.send(`DbLink: , ${db_link}!`);
+  res.send(`DbLink: ${db_link}!`);
 });
 
 // Custom error handler middleware
