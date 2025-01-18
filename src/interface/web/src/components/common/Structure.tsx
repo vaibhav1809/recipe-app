@@ -1,8 +1,8 @@
-import React from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import RouterApp from '../../routers/RouterApp';
 
-import Footer from './Footer.tsx';
-import Header from './Header.tsx';
-import RouterApp from '../../routers/RouterApp.tsx';
+import { Button } from '../../shadui/components/ui/button';
 
 export default function Structure() {
 	return (
@@ -11,6 +11,9 @@ export default function Structure() {
 			<div>
 				<RouterApp />
 			</div>
+
+			<Button variant="outline">Button</Button>
+
 			<Footer />
 		</div>
 	);
